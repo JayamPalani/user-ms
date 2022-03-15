@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: user
+  cache:
+    jcache:
+      config: classpath:ehcache.xml  
+  datasource:
+    url:  jdbc:mysql://localhost:3306/user_sch
+    username: root
+    password: root
+  jpa:
+    properties:
+     hibernate:
+       dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    
